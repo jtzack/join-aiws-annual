@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Upgrade To AIWS Annual | AI Writing Skool</title>
-<meta name="description" content="Upgrade to an AIWS Annual Membership: save $388/year and instantly unlock all 9 Digital Writing Fundamentals mini-courses.">
+<title>Join AIWS Annual | AI Writing Skool</title>
+<meta name="description" content="Join AI Writing Skool as an Annual Member: save $388/year and instantly unlock all 9 Digital Writing Fundamentals mini-courses.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -58,7 +58,13 @@
   .hero {
     position: relative;
     overflow: hidden;
-    padding: 56px 0 72px;
+    /* fill the first screen so the next section stays below the fold */
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0 48px;
     background:
       radial-gradient(1100px 600px at 82% 112%, rgba(8, 46, 77, 0.95), transparent 65%),
       radial-gradient(900px 500px at 8% -20%, rgba(8, 46, 77, 0.55), transparent 60%),
@@ -92,34 +98,11 @@
   }
 
   h1 {
-    font-size: clamp(30px, 3.6vw, 46px);
-    margin: 0 0 18px;
+    font-size: clamp(32px, 3.9vw, 50px);
+    margin: 0 0 32px;
   }
 
   h1 .accent { color: var(--aiws-purple); }
-
-  /* quieter secondary headline under the h1 */
-  .whisper {
-    display: block;
-    font-family: "Oswald", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    line-height: 1.35;
-    font-size: clamp(16px, 1.7vw, 21px);
-    color: var(--text-dim);
-    margin: 0 0 20px;
-  }
-
-  /* Sub-headline: Inter Display Semibold, line weight 140% */
-  .hero-sub {
-    font-weight: 600;
-    font-size: clamp(16px, 1.7vw, 19px);
-    line-height: 1.4;
-    color: var(--text-dim);
-    margin: 0 0 36px;
-  }
-
-  .hero-sub strong { color: var(--aiws-white); }
 
   /* Buttons: Inter Display, pill-shaped per brand guidelines */
   .btn {
@@ -163,7 +146,7 @@
     margin: 0 auto 48px;
   }
 
-  /* ============ UPGRADE BENEFITS ============ */
+  /* ============ ANNUAL BENEFITS ============ */
   .benefits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -202,134 +185,6 @@
 
   .benefit strong { color: var(--aiws-white); font-weight: 600; }
 
-  /* ============ PRICE COMPARE ============ */
-  .price-strip {
-    margin-top: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .price-box {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: var(--card-radius);
-    padding: 26px 36px;
-    text-align: center;
-    min-width: 220px;
-  }
-
-  .price-box.featured {
-    border-color: rgba(112, 138, 243, 0.65);
-    background:
-      radial-gradient(300px 160px at 50% 0%, rgba(8, 46, 77, 0.85), transparent 75%),
-      var(--card-bg);
-  }
-
-  .price-box .tag {
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 12px;
-    color: var(--text-dim);
-    margin-bottom: 8px;
-  }
-
-  .price-box.featured .tag { color: var(--aiws-purple); }
-
-  .price-box .amount {
-    font-family: "Oswald", sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  .price-box .amount small {
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--text-dim);
-  }
-
-  .price-box .strike {
-    text-decoration: line-through;
-    text-decoration-color: var(--aiws-red);
-    text-decoration-thickness: 3px;
-    color: var(--text-dim);
-  }
-
-  .price-box .sub {
-    margin-top: 8px;
-    font-size: 14px;
-    color: var(--text-dim);
-  }
-
-  .save-pill {
-    display: inline-block;
-    margin-top: 10px;
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 13px;
-    color: var(--aiws-black);
-    background: var(--aiws-green);
-    border-radius: 999px;
-    padding: 6px 16px;
-  }
-
-  /* ============ EXPIRING BONUS ============ */
-  .bonus {
-    background:
-      radial-gradient(1000px 550px at 50% -10%, rgba(8, 46, 77, 0.65), transparent 70%),
-      var(--aiws-black);
-    border-top: 1px solid rgba(252, 250, 245, 0.07);
-    border-bottom: 1px solid rgba(252, 250, 245, 0.07);
-  }
-
-  .bonus .section-label { color: var(--aiws-yellow); }
-
-  .bonus h2 { margin-bottom: 28px; }
-
-  .countdown {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin: 0 auto 44px;
-  }
-
-  .count-box {
-    background: var(--card-bg);
-    border: 1px solid rgba(243, 238, 102, 0.35);
-    border-radius: 14px;
-    padding: 16px 10px 12px;
-    min-width: 92px;
-    text-align: center;
-  }
-
-  .count-box .num {
-    display: block;
-    font-family: "Oswald", sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 1;
-    color: var(--aiws-yellow);
-    font-variant-numeric: tabular-nums;
-  }
-
-  .count-box .unit {
-    display: block;
-    margin-top: 8px;
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 11px;
-    color: var(--text-dim);
-  }
-
   .hero-shelf {
     position: relative;
     /* top of the books lines up with the top of the headline */
@@ -346,81 +201,6 @@
     -webkit-mask-image: radial-gradient(68% 88% at 50% 50%, #000 38%, transparent 80%);
     mask-image: radial-gradient(68% 88% at 50% 50%, #000 38%, transparent 80%);
   }
-
-  .hero-countdown {
-    justify-content: flex-start;
-    margin: 36px 0 0;
-  }
-
-  .hero-countdown .count-box {
-    background: rgba(10, 10, 10, 0.5);
-    min-width: 78px;
-    padding: 13px 8px 10px;
-  }
-
-  .hero-countdown .num { font-size: 30px; }
-
-  .countdown-expired {
-    text-align: center;
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 20px;
-    color: var(--aiws-red);
-    margin: 0 auto 44px;
-  }
-
-  .bonus-copy {
-    max-width: 760px;
-    margin: 0 auto;
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 17px;
-  }
-
-  .bonus-copy p { margin-bottom: 18px; }
-
-  .bonus-copy strong { color: var(--aiws-white); }
-
-  .bonus-list {
-    max-width: 760px;
-    margin: 34px auto;
-    display: grid;
-    gap: 18px;
-    text-align: left;
-  }
-
-  .bonus-item {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 14px;
-    padding: 22px 26px;
-    font-size: 16.5px;
-    color: var(--text-dim);
-  }
-
-  .bonus-item .gift {
-    flex-shrink: 0;
-    font-size: 22px;
-    line-height: 1.3;
-  }
-
-  .bonus-item strong { color: var(--aiws-white); font-weight: 600; }
-
-  .bonus-tagline {
-    text-align: center;
-    font-weight: 600;
-    font-size: 19px;
-    color: var(--aiws-white);
-    max-width: 640px;
-    margin: 0 auto 40px;
-  }
-
-  .bonus-cta { text-align: center; }
 
   /* ============ INSIDE EACH COURSE ============ */
   .inside {
@@ -512,7 +292,7 @@
     font-size: 15.5px;
   }
 
-  /* ============ STANDARD INCLUDES ============ */
+  /* ============ MEMBERSHIP INCLUDES ============ */
   .standard {
     background:
       radial-gradient(1000px 550px at 50% 100%, rgba(8, 46, 77, 0.55), transparent 70%),
@@ -605,7 +385,6 @@
     /* stack the hero: copy on top, image below */
     .hero { text-align: center; }
     .hero-grid { grid-template-columns: 1fr; gap: 8px; }
-    .hero-countdown { justify-content: center; }
     .hero-shelf { margin-top: 0; }
     .hero-shelf img { width: 112%; margin-left: -6%; }
   }
@@ -614,12 +393,8 @@
     section { padding: 56px 0; }
     .hero { padding: 48px 0 60px; }
     .benefits, .courses { grid-template-columns: 1fr; }
-    .price-strip { flex-direction: column; align-items: stretch; }
-    .inside-item, .standard-item, .bonus-item { padding: 20px; }
+    .inside-item, .standard-item { padding: 20px; }
     .checkout-box { padding: 10px; }
-    .countdown { gap: 8px; }
-    .count-box { min-width: 72px; padding: 12px 6px 10px; }
-    .count-box .num { font-size: 30px; }
   }
 </style>
 </head>
@@ -632,20 +407,9 @@
 
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1>Instantly Unlock <span class="accent">9 Bonus Mini Courses</span> To Build A Thriving 1-Person Writing Business</h1>
+        <h1><span class="accent">Save $388/Year</span> On AI Writing Skool And Instantly Unlock Our Entire Digital Writing Fundamentals Course Library</h1>
 
-        <span class="whisper">(And Save $388/Year On Your AI Writing Skool Membership)</span>
-
-        <p class="hero-sub">Plus, join before <strong>July 31st</strong> and get our <strong>AIWS Secret Files</strong> for <strong>FREE</strong>—the emails, lead magnets, and AI prompts behind our most profitable campaigns of the past year</p>
-
-        <a class="btn" href="#checkout">Upgrade To AIWS Annual</a>
-
-        <div class="countdown hero-countdown" aria-label="Time left until the bonus expires">
-          <div class="count-box"><span class="num" data-cd-days>--</span><span class="unit">Days</span></div>
-          <div class="count-box"><span class="num" data-cd-hours>--</span><span class="unit">Hours</span></div>
-          <div class="count-box"><span class="num" data-cd-mins>--</span><span class="unit">Minutes</span></div>
-          <div class="count-box"><span class="num" data-cd-secs>--</span><span class="unit">Seconds</span></div>
-        </div>
+        <a class="btn" href="#checkout">Join Now</a>
       </div>
 
       <div class="hero-shelf">
@@ -655,17 +419,14 @@
   </div>
 </header>
 
-<!-- ============ UPGRADE BENEFITS ============ -->
+<!-- ============ ANNUAL BENEFITS ============ -->
 <section>
   <div class="container">
-    <span class="section-label">The Upgrade</span>
-    <h2>Upgrade To An AIWS Annual Membership</h2>
-
     <div class="benefits">
       <div class="benefit">
         <span class="icon">💰</span>
         <h3>Save $388/Year On Membership</h3>
-        <p>No more $99 monthly payments! Pay <strong>$800 once</strong> and you'll get access to AIWS for 1 year (which is only <strong>$66/month</strong>).</p>
+        <p>Skip the $99 monthly payments! Pay <strong>$800 once</strong> and you'll get access to AIWS for 1 year (which is only <strong>$66/month</strong>).</p>
       </div>
 
       <div class="benefit">
@@ -681,94 +442,64 @@
       </div>
     </div>
 
-    <div class="price-strip">
-      <div class="price-box">
-        <div class="tag">Monthly Membership</div>
-        <div class="amount strike">$99<small>/mo</small></div>
-        <div class="sub">$1,188 per year</div>
-      </div>
-      <div class="price-box featured">
-        <div class="tag">AIWS Annual</div>
-        <div class="amount">$800<small>/yr</small></div>
-        <div class="sub">Works out to just $66/month</div>
-        <span class="save-pill">You Save $388</span>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ============ EXPIRING BONUS ============ -->
-<section class="bonus" id="bonus">
+<!-- ============ MEMBERSHIP INCLUDES ============ -->
+<section class="standard">
   <div class="container">
-    <span class="section-label">🎁 Expiring Bonus</span>
-    <h2>Upgrade Before Friday, July 31st At Midnight &amp; Get FREE Access To Our AIWS Secret Files</h2>
+    <span class="section-label">Your Membership</span>
+    <h2>Here's Everything Included In Your AIWS Membership:</h2>
 
-    <div class="countdown" aria-label="Time left until the bonus expires">
-      <div class="count-box"><span class="num" data-cd-days>--</span><span class="unit">Days</span></div>
-      <div class="count-box"><span class="num" data-cd-hours>--</span><span class="unit">Hours</span></div>
-      <div class="count-box"><span class="num" data-cd-mins>--</span><span class="unit">Minutes</span></div>
-      <div class="count-box"><span class="num" data-cd-secs>--</span><span class="unit">Seconds</span></div>
-    </div>
+    <div class="standard-list">
+      <div class="standard-item">
+        <span class="icon">🤖</span>
+        <div>
+          <h3>Instant Access To Our Exclusive AI Model, "AI Cole"</h3>
+          <p>This has been trained on all our digital products, books, live calls, and more (over 5,000,000 words and counting!). Ask it any question, any time about writing, digital business, AI, and… well, anything you can think of!</p>
+        </div>
+      </div>
 
-    <div class="bonus-copy">
-      <p>Over the past 12 months, we've tested a LOT of marketing campaigns.</p>
-      <p>Some flopped. Some did okay. And some absolutely crushed it.</p>
-      <p>The Secret Files are the best of the best—<strong>the exact swipe files and AI prompts behind our most profitable marketing assets of the past year:</strong></p>
-    </div>
+      <div class="standard-item">
+        <span class="icon">🎙️</span>
+        <div>
+          <h3>Monday Hot Seats &amp; Masterclasses With Nicolas Cole</h3>
+          <p>Get live coaching from Cole on anything related to digital businesses, social content, writing, newsletters, digital products, AI prompts, and more.</p>
+        </div>
+      </div>
 
-    <div class="bonus-list">
-      <div class="bonus-item">
-        <span class="gift">🎁</span>
-        <div><strong>Our 4 top-performing email sequences</strong> (product launch, countdown, objection-handling, and webinar)—each with an AI mega prompt to write yours 10x faster</div>
+      <div class="standard-item">
+        <span class="icon">🛠️</span>
+        <div>
+          <h3>Weekly AI &amp; Tech Clinic With Mitch Harris</h3>
+          <p>Troubleshoot all your AI issues with our in-house AI wizard, Mitch. Ask any questions about AI workflow building, AI tools, Claude Skills, Cowork &amp; Code, and more.</p>
+        </div>
       </div>
-      <div class="bonus-item">
-        <span class="gift">🎁</span>
-        <div><strong>Our top gated lead magnet emails</strong>—the most effective call-booking tactic we ran all year (plus the AI prompt to replicate it)</div>
-      </div>
-      <div class="bonus-item">
-        <span class="gift">🎁</span>
-        <div><strong>Our 5 most popular AI prompts of the year</strong> (including AI Hunter and Hormozi's Persuasion Blueprint)—normally reserved for paid customers only</div>
-      </div>
-      <div class="bonus-item">
-        <span class="gift">🎁</span>
-        <div><strong>Our 5 best LinkedIn viral drops</strong>—the posts that grew our audience AND email list the most, with plug-and-play templates for your niche</div>
-      </div>
-      <div class="bonus-item">
-        <span class="gift">🎁</span>
-        <div><strong>(Plus a bonus) 5 sales pages that collectively generated $1,000,000+ in revenue</strong>—and our entire Digital Product Builder prompt library</div>
-      </div>
-    </div>
 
-    <p class="bonus-tagline">In short: instead of studying marketing… you can just copy ours.</p>
-
-    <div class="bonus-cta">
-      <a class="btn" href="#checkout">Upgrade &amp; Claim The Secret Files</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ INSIDE EACH COURSE ============ -->
-<section class="inside">
-  <div class="container">
-    <span class="section-label">The Course Library</span>
-    <h2>Inside Each Course, You'll Find:</h2>
-
-    <div class="inside-list">
-      <div class="inside-item">
-        <span class="check">✓</span>
-        <div><strong>Short, actionable text &amp; video lessons</strong> you can finish in one sitting</div>
+      <div class="standard-item">
+        <span class="icon">📦</span>
+        <div>
+          <h3>Weekly Releases Of Digital Business Cheat Sheets, AI Prompts, And Claude Skills</h3>
+          <p>Every week we drop a new asset inside AI Writing Skool—these are assets we're using to build and scale our own digital businesses.</p>
+        </div>
       </div>
-      <div class="inside-item">
-        <span class="check">✓</span>
-        <div><strong>The exact frameworks &amp; playbooks</strong> we've used to generate $20,000,000+ in sales</div>
+
+      <div class="standard-item">
+        <span class="icon">🏷️</span>
+        <div>
+          <h3>50%-Off All LIVE 2-Week Bootcamps</h3>
+          <p>Pay half the normal price for our 2-week Bootcamps where you get live coaching from Cole, Dickie, or Mitch.</p>
+        </div>
       </div>
-      <div class="inside-item">
-        <span class="check">✓</span>
-        <div><strong>Plus the templates and AI prompts</strong> to help you implement everything you learn 10X faster</div>
+
+      <div class="standard-item">
+        <span class="icon">🌐</span>
+        <div>
+          <h3>Private AI Community</h3>
+          <p>Interact and network with other digital creators, business builders, and AI experts inside our exclusive Skool Community.</p>
+        </div>
       </div>
     </div>
-
-    <p class="inside-footer">All included in your AIWS membership. Instantly unlocked.</p>
   </div>
 </section>
 
@@ -776,7 +507,7 @@
 <section>
   <div class="container">
     <span class="section-label">9 Mini-Courses</span>
-    <h2>Here's What's Inside:</h2>
+    <h2>Digital Writing Fundamentals Course Library</h2>
 
     <div class="courses">
       <div class="course">
@@ -845,70 +576,37 @@
   </div>
 </section>
 
-<!-- ============ STANDARD INCLUDES ============ -->
-<section class="standard">
+<!-- ============ INSIDE EACH COURSE ============ -->
+<section class="inside">
   <div class="container">
-    <span class="section-label">And That's Not All</span>
-    <h2>Plus, You Get Everything Included In AIWS Standard:</h2>
+    <span class="section-label">The Course Library</span>
+    <h2>Inside Each Course, You'll Find:</h2>
 
-    <div class="standard-list">
-      <div class="standard-item">
-        <span class="icon">🤖</span>
-        <div>
-          <h3>Instant Access To Our Exclusive AI Model, "AI Cole"</h3>
-          <p>This has been trained on all our digital products, books, live calls, and more (over 5,000,000 words and counting!). Ask it any question, any time about writing, digital business, AI, and… well, anything you can think of!</p>
-        </div>
+    <div class="inside-list">
+      <div class="inside-item">
+        <span class="check">✓</span>
+        <div><strong>Short, actionable text &amp; video lessons</strong> you can finish in one sitting</div>
       </div>
-
-      <div class="standard-item">
-        <span class="icon">🎙️</span>
-        <div>
-          <h3>Monday Hot Seats &amp; Masterclasses With Nicolas Cole</h3>
-          <p>Get live coaching from Cole on anything related to digital businesses, social content, writing, newsletters, digital products, AI prompts, and more.</p>
-        </div>
+      <div class="inside-item">
+        <span class="check">✓</span>
+        <div><strong>The exact frameworks &amp; playbooks</strong> we've used to generate $20,000,000+ in sales</div>
       </div>
-
-      <div class="standard-item">
-        <span class="icon">🛠️</span>
-        <div>
-          <h3>Weekly AI &amp; Tech Clinic With Mitch Harris</h3>
-          <p>Troubleshoot all your AI issues with our in-house AI wizard, Mitch. Ask any questions about AI workflow building, AI tools, Claude Skills, Cowork &amp; Code, and more.</p>
-        </div>
-      </div>
-
-      <div class="standard-item">
-        <span class="icon">📦</span>
-        <div>
-          <h3>Weekly Releases Of Digital Business Cheat Sheets, AI Prompts, And Claude Skills</h3>
-          <p>Every week we drop a new asset inside AI Writing Skool—these are assets we're using to build and scale our own digital businesses.</p>
-        </div>
-      </div>
-
-      <div class="standard-item">
-        <span class="icon">🏷️</span>
-        <div>
-          <h3>50%-Off All LIVE 2-Week Bootcamps</h3>
-          <p>Pay half the normal price for our 2-week Bootcamps where you get live coaching from Cole, Dickie, or Mitch.</p>
-        </div>
-      </div>
-
-      <div class="standard-item">
-        <span class="icon">🌐</span>
-        <div>
-          <h3>Private AI Community</h3>
-          <p>Interact and network with other digital creators, business builders, and AI experts inside our exclusive Skool Community.</p>
-        </div>
+      <div class="inside-item">
+        <span class="check">✓</span>
+        <div><strong>Plus the templates and AI prompts</strong> to help you implement everything you learn 10X faster</div>
       </div>
     </div>
+
+    <p class="inside-footer">All included in your AIWS membership. Instantly unlocked.</p>
   </div>
 </section>
 
 <!-- ============ CHECKOUT ============ -->
 <section class="checkout" id="checkout">
   <div class="container">
-    <span class="section-label">Ready To Upgrade?</span>
+    <span class="section-label">Ready To Join?</span>
     <h2>Lock In Your AIWS Annual Membership</h2>
-    <p class="recap">One payment of <strong>$800</strong> gets you a full year of AIWS—that's just <strong>$66/month</strong>, a savings of <strong>$388/year</strong>—plus priority Hot Seat access and all 9 Digital Writing Fundamentals mini-courses, instantly unlocked. Upgrade before <strong>Friday, July 31st at midnight</strong> and the <strong>AIWS Secret Files</strong> are yours free, too.</p>
+    <p class="recap">One payment of <strong>$800</strong> gets you a full year of AIWS—that's just <strong>$66/month</strong>, a savings of <strong>$388/year</strong>—plus priority Hot Seat access and all 9 Digital Writing Fundamentals mini-courses, instantly unlocked.</p>
 
     <div class="checkout-box">
       <sc-checkout product="aiws-annual" subdomain="ship" coupon=""></sc-checkout>
@@ -920,45 +618,6 @@
   <img class="logo" src="images/AIWS WHITE.svg" alt="AIWS">
   <p>AI Writing Skool · Write Online, Make Money</p>
 </footer>
-
-<script>
-  // Countdown to the expiring bonus deadline:
-  // midnight at the end of Friday, July 31st, 2026 (Eastern Time)
-  (function () {
-    var DEADLINE = new Date('2026-08-01T00:00:00-04:00').getTime();
-    var wraps = Array.prototype.slice.call(document.querySelectorAll('.countdown'));
-
-    function pad(n) { return n < 10 ? '0' + n : '' + n; }
-
-    function tick() {
-      var diff = DEADLINE - Date.now();
-      if (diff <= 0) {
-        clearInterval(timer);
-        wraps.forEach(function (wrap) {
-          var expired = document.createElement('p');
-          expired.className = 'countdown-expired';
-          expired.textContent = 'This bonus has expired.';
-          wrap.replaceWith(expired);
-        });
-        return;
-      }
-      var s = Math.floor(diff / 1000);
-      var d = pad(Math.floor(s / 86400));
-      var h = pad(Math.floor(s % 86400 / 3600));
-      var m = pad(Math.floor(s % 3600 / 60));
-      var sec = pad(s % 60);
-      wraps.forEach(function (wrap) {
-        wrap.querySelector('[data-cd-days]').textContent = d;
-        wrap.querySelector('[data-cd-hours]').textContent = h;
-        wrap.querySelector('[data-cd-mins]').textContent = m;
-        wrap.querySelector('[data-cd-secs]').textContent = sec;
-      });
-    }
-
-    var timer = setInterval(tick, 1000);
-    tick();
-  })();
-</script>
 
 </body>
 </html>
