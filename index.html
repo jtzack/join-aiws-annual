@@ -58,7 +58,13 @@
   .hero {
     position: relative;
     overflow: hidden;
-    padding: 56px 0 72px;
+    /* fill the first screen so the next section stays below the fold */
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0 48px;
     background:
       radial-gradient(1100px 600px at 82% 112%, rgba(8, 46, 77, 0.95), transparent 65%),
       radial-gradient(900px 500px at 8% -20%, rgba(8, 46, 77, 0.55), transparent 60%),
@@ -494,7 +500,7 @@
       <div class="hero-copy">
         <h1><span class="accent">Save $388/Year</span> On AI Writing Skool When You Join As An Annual Member</h1>
 
-        <span class="whisper">(And Instantly Unlock Our Entire Digital Writing Fundamentals Course Library)</span>
+        <span class="whisper">(Plus Instantly Unlock Our Entire Digital Writing Fundamentals Course Library)</span>
 
         <a class="btn" href="#checkout">Join Now</a>
       </div>
