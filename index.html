@@ -98,23 +98,11 @@
   }
 
   h1 {
-    font-size: clamp(30px, 3.6vw, 46px);
-    margin: 0 0 18px;
+    font-size: clamp(34px, 4.4vw, 58px);
+    margin: 0 0 32px;
   }
 
   h1 .accent { color: var(--aiws-purple); }
-
-  /* quieter secondary headline under the h1 */
-  .whisper {
-    display: block;
-    font-family: "Oswald", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    line-height: 1.35;
-    font-size: clamp(16px, 1.7vw, 21px);
-    color: var(--text-dim);
-    margin: 0 0 20px;
-  }
 
   /* Buttons: Inter Display, pill-shaped per brand guidelines */
   .btn {
@@ -196,84 +184,6 @@
   }
 
   .benefit strong { color: var(--aiws-white); font-weight: 600; }
-
-  /* ============ PRICE COMPARE ============ */
-  .price-strip {
-    margin-top: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .price-box {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: var(--card-radius);
-    padding: 26px 36px;
-    text-align: center;
-    min-width: 220px;
-  }
-
-  .price-box.featured {
-    border-color: rgba(112, 138, 243, 0.65);
-    background:
-      radial-gradient(300px 160px at 50% 0%, rgba(8, 46, 77, 0.85), transparent 75%),
-      var(--card-bg);
-  }
-
-  .price-box .tag {
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 12px;
-    color: var(--text-dim);
-    margin-bottom: 8px;
-  }
-
-  .price-box.featured .tag { color: var(--aiws-purple); }
-
-  .price-box .amount {
-    font-family: "Oswald", sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  .price-box .amount small {
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--text-dim);
-  }
-
-  .price-box .strike {
-    text-decoration: line-through;
-    text-decoration-color: var(--aiws-red);
-    text-decoration-thickness: 3px;
-    color: var(--text-dim);
-  }
-
-  .price-box .sub {
-    margin-top: 8px;
-    font-size: 14px;
-    color: var(--text-dim);
-  }
-
-  .save-pill {
-    display: inline-block;
-    margin-top: 10px;
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 13px;
-    color: var(--aiws-black);
-    background: var(--aiws-green);
-    border-radius: 999px;
-    padding: 6px 16px;
-  }
 
   .hero-shelf {
     position: relative;
@@ -483,7 +393,6 @@
     section { padding: 56px 0; }
     .hero { padding: 48px 0 60px; }
     .benefits, .courses { grid-template-columns: 1fr; }
-    .price-strip { flex-direction: column; align-items: stretch; }
     .inside-item, .standard-item { padding: 20px; }
     .checkout-box { padding: 10px; }
   }
@@ -498,9 +407,7 @@
 
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1><span class="accent">Save $388/Year</span> On AI Writing Skool When You Join As An Annual Member</h1>
-
-        <span class="whisper">(Plus Instantly Unlock Our Entire Digital Writing Fundamentals Course Library)</span>
+        <h1><span class="accent">Save $388/Year</span> On AI Writing Skool And Instantly Unlock Our Entire Digital Writing Fundamentals Course Library</h1>
 
         <a class="btn" href="#checkout">Join Now</a>
       </div>
@@ -515,9 +422,6 @@
 <!-- ============ ANNUAL BENEFITS ============ -->
 <section>
   <div class="container">
-    <span class="section-label">The Annual Membership</span>
-    <h2>Join AIWS As An Annual Member</h2>
-
     <div class="benefits">
       <div class="benefit">
         <span class="icon">💰</span>
@@ -538,19 +442,6 @@
       </div>
     </div>
 
-    <div class="price-strip">
-      <div class="price-box">
-        <div class="tag">Monthly Membership</div>
-        <div class="amount strike">$99<small>/mo</small></div>
-        <div class="sub">$1,188 per year</div>
-      </div>
-      <div class="price-box featured">
-        <div class="tag">AIWS Annual</div>
-        <div class="amount">$800<small>/yr</small></div>
-        <div class="sub">Works out to just $66/month</div>
-        <span class="save-pill">You Save $388</span>
-      </div>
-    </div>
   </div>
 </section>
 
