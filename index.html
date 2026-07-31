@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Join AIWS Annual | AI Writing Skool</title>
-<meta name="description" content="Join AI Writing Skool as an Annual Member: save $388/year and instantly unlock all 9 Digital Writing Fundamentals mini-courses.">
+<meta name="description" content="Use AI to write, automate tasks, create digital products, and make money online. AI Writing Skool is the leading educational community for writers, creators, and builders who want to stay on the cutting-edge of AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -94,15 +94,22 @@
     display: grid;
     grid-template-columns: 1.02fr 0.98fr;
     gap: 56px;
-    align-items: start;
+    align-items: center;
   }
 
   h1 {
     font-size: clamp(32px, 3.9vw, 50px);
-    margin: 0 0 32px;
+    margin: 0 0 20px;
   }
 
   h1 .accent { color: var(--aiws-purple); }
+
+  .hero-sub {
+    font-size: 18px;
+    color: var(--text-dim);
+    max-width: 520px;
+    margin: 0 0 36px;
+  }
 
   /* Buttons: Inter Display, pill-shaped per brand guidelines */
   .btn {
@@ -146,60 +153,15 @@
     margin: 0 auto 48px;
   }
 
-  /* ============ ANNUAL BENEFITS ============ */
-  .benefits {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
+  .hero-visual { position: relative; }
 
-  .benefit {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: var(--card-radius);
-    padding: 36px 30px;
-  }
-
-  .benefit .icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
-    font-size: 24px;
-    margin-bottom: 20px;
-    background: rgba(8, 46, 77, 0.6);
-    border: 1px solid rgba(112, 138, 243, 0.4);
-  }
-
-  .benefit h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-  }
-
-  .benefit p {
-    color: var(--text-dim);
-    font-size: 15.5px;
-  }
-
-  .benefit strong { color: var(--aiws-white); font-weight: 600; }
-
-  .hero-shelf {
-    position: relative;
-    /* top of the books lines up with the top of the headline */
-    margin-top: -31px;
-  }
-
-  .hero-shelf img {
+  .hero-visual img {
     display: block;
-    width: 118%;
-    max-width: none;
+    width: 100%;
     height: auto;
-    margin-left: -4%;
-    /* feather the edges so the artwork melts into the hero background */
-    -webkit-mask-image: radial-gradient(68% 88% at 50% 50%, #000 38%, transparent 80%);
-    mask-image: radial-gradient(68% 88% at 50% 50%, #000 38%, transparent 80%);
+    border-radius: var(--card-radius);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 24px 80px rgba(8, 46, 77, 0.65);
   }
 
   /* ============ INSIDE EACH COURSE ============ */
@@ -340,6 +302,58 @@
     font-size: 15.5px;
   }
 
+  .standard-item strong { color: var(--aiws-white); font-weight: 600; }
+
+  /* ============ WHO ARE WE ============ */
+  .who h2 { margin-bottom: 18px; }
+
+  .who-intro {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 48px;
+    color: var(--text-dim);
+    font-size: 17px;
+  }
+
+  .who-intro p + p { margin-top: 10px; }
+
+  .founders {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .founder {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+    padding: 40px 34px;
+    text-align: center;
+  }
+
+  .founder img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 22px;
+    border: 3px solid rgba(112, 138, 243, 0.5);
+  }
+
+  .founder h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .founder p {
+    color: var(--text-dim);
+    font-size: 15.5px;
+  }
+
+  .founder p em { color: var(--aiws-white); font-style: normal; font-weight: 600; }
+
   /* ============ CHECKOUT ============ */
   .checkout {
     text-align: center;
@@ -357,6 +371,8 @@
     box-shadow: 0 20px 60px rgba(8, 46, 77, 0.6);
   }
 
+  .checkout h2 { margin-bottom: 22px; }
+
   .checkout .recap {
     max-width: 640px;
     margin: 0 auto 40px;
@@ -364,7 +380,15 @@
     font-size: 17px;
   }
 
+  .checkout .recap p + p { margin-top: 16px; }
+
   .checkout .recap strong { color: var(--aiws-white); }
+
+  .checkout .recap .lead {
+    color: var(--aiws-white);
+    font-weight: 600;
+    font-size: 19px;
+  }
 
   /* ============ FOOTER ============ */
   footer {
@@ -379,21 +403,21 @@
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 920px) {
-    .benefits { grid-template-columns: repeat(2, 1fr); }
     .courses { grid-template-columns: repeat(2, 1fr); }
 
     /* stack the hero: copy on top, image below */
     .hero { text-align: center; }
-    .hero-grid { grid-template-columns: 1fr; gap: 8px; }
-    .hero-shelf { margin-top: 0; }
-    .hero-shelf img { width: 112%; margin-left: -6%; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-sub { margin-left: auto; margin-right: auto; }
+    .founders { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 620px) {
     section { padding: 56px 0; }
     .hero { padding: 48px 0 60px; }
-    .benefits, .courses { grid-template-columns: 1fr; }
+    .courses { grid-template-columns: 1fr; }
     .inside-item, .standard-item { padding: 20px; }
+    .founder { padding: 28px 22px; }
     .checkout-box { padding: 10px; }
   }
 </style>
@@ -407,43 +431,19 @@
 
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1><span class="accent">Save $388/Year</span> On AI Writing Skool And Instantly Unlock Our Entire Digital Writing Fundamentals Course Library</h1>
+        <h1>Use AI To Write, Automate Tasks, Create Digital Products, And <span class="accent">Make Money Online</span></h1>
 
-        <a class="btn" href="#checkout">Join Now</a>
+        <p class="hero-sub">AI Writing Skool is the leading educational community for writers, creators, and builders who want to stay on the cutting-edge of AI.</p>
+
+        <a class="btn" href="#checkout">Join AI Writing Skool Today</a>
       </div>
 
-      <div class="hero-shelf">
-        <img src="images/fundamentals_bookshelf.png" alt="All 9 Digital Writing Fundamentals courses lined up on a shelf">
+      <div class="hero-visual">
+        <img src="images/aiws-hero.png" alt="Inside the AI Writing Skool community classroom">
       </div>
     </div>
   </div>
 </header>
-
-<!-- ============ ANNUAL BENEFITS ============ -->
-<section>
-  <div class="container">
-    <div class="benefits">
-      <div class="benefit">
-        <span class="icon">💰</span>
-        <h3>Save $388/Year On Membership</h3>
-        <p>Skip the $99 monthly payments! Pay <strong>$800 once</strong> and you'll get access to AIWS for 1 year (which is only <strong>$66/month</strong>).</p>
-      </div>
-
-      <div class="benefit">
-        <span class="icon">🔥</span>
-        <h3>Priority Access To Hot Seats</h3>
-        <p>Your questions will be bumped to the front of the queue so <strong>Cole and Mitch will answer them first</strong> (before monthly AIWS members).</p>
-      </div>
-
-      <div class="benefit">
-        <span class="icon">🔓</span>
-        <h3>Unlock 9 Digital Writing Fundamentals Mini-Courses</h3>
-        <p>A collection of <strong>9 brand-new mini-courses</strong> that walk you step-by-step through every fundamental skill you need to build a profitable digital writing business.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- ============ MEMBERSHIP INCLUDES ============ -->
 <section class="standard">
@@ -497,6 +497,30 @@
         <div>
           <h3>Private AI Community</h3>
           <p>Interact and network with other digital creators, business builders, and AI experts inside our exclusive Skool Community.</p>
+        </div>
+      </div>
+
+      <div class="standard-item">
+        <span class="icon">💰</span>
+        <div>
+          <h3>Save $388/Year On Membership</h3>
+          <p>Skip the $99 monthly payments! Pay <strong>$800 once</strong> and you'll get access to AIWS for 1 year (which is only <strong>$66/month</strong>).</p>
+        </div>
+      </div>
+
+      <div class="standard-item">
+        <span class="icon">🔥</span>
+        <div>
+          <h3>Priority Access To Hot Seats</h3>
+          <p>Your questions will be bumped to the front of the queue so <strong>Cole and Mitch will answer them first</strong> (before monthly AIWS members).</p>
+        </div>
+      </div>
+
+      <div class="standard-item">
+        <span class="icon">🔓</span>
+        <div>
+          <h3>Unlock 9 Digital Writing Fundamentals Mini-Courses</h3>
+          <p>A collection of <strong>9 brand-new mini-courses</strong> that walk you step-by-step through every fundamental skill you need to build a profitable digital writing business.</p>
         </div>
       </div>
     </div>
@@ -601,12 +625,44 @@
   </div>
 </section>
 
+<!-- ============ WHO ARE WE ============ -->
+<section class="who">
+  <div class="container">
+    <span class="section-label">Your Instructors</span>
+    <h2>Who Are We?</h2>
+
+    <div class="who-intro">
+      <p>If you're reading this, you probably know who we are already...</p>
+      <p>But here's a little refresher just in case :)</p>
+    </div>
+
+    <div class="founders">
+      <div class="founder">
+        <img src="images/Cole_Profile_Picture.jpg" alt="Nicolas Cole">
+        <h3>Nicolas Cole</h3>
+        <p>Author of the best-selling book, <em>The Art &amp; Business of Online Writing</em>. Founder of the first ghostwriting agency for Silicon Valley founders &amp; executives, and Premium Ghostwriting Academy—the leading ghostwriting training program on the Internet.</p>
+      </div>
+
+      <div class="founder">
+        <img src="images/Dickie_Profile_Pic.jpg" alt="Dickie Bush">
+        <h3>Dickie Bush</h3>
+        <p>Former Wall Street trader at Blackrock turned Digital Writer &amp; Digital Entrepreneur. Creator of Ship 30 for 30—the fastest-growing cohort-based writing program on the Internet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CHECKOUT ============ -->
 <section class="checkout" id="checkout">
   <div class="container">
-    <span class="section-label">Ready To Join?</span>
-    <h2>Lock In Your AIWS Annual Membership</h2>
-    <p class="recap">One payment of <strong>$800</strong> gets you a full year of AIWS—that's just <strong>$66/month</strong>, a savings of <strong>$388/year</strong>—plus priority Hot Seat access and all 9 Digital Writing Fundamentals mini-courses, instantly unlocked.</p>
+    <h2>Ready To Incorporate AI Into Everything You Do?</h2>
+    <div class="recap">
+      <p class="lead">Then we'd love to have you inside our AI Writing Skool!</p>
+      <p>AI isn't going anywhere. In fact, it's only going to accelerate. We are already using AI <strong><em>10x more</em></strong> this year than last year. And we want to help you do the same—leveraging AI inside your writing, your business, and your life.</p>
+      <p>Just complete the form below to get started.</p>
+      <p>Once we process your payment, you will get an email with instructions on how to join AI Writing Skool.</p>
+      <p>We hope to see you inside!</p>
+    </div>
 
     <div class="checkout-box">
       <sc-checkout product="aiws-annual" subdomain="ship" coupon=""></sc-checkout>
